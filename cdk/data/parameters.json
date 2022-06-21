@@ -1,0 +1,4 @@
+{
+    "InstanceType": "t2.micro",
+    "InstanceName": "webserver-420"
+}
