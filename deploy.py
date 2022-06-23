@@ -8,9 +8,10 @@ if(flag1 == 'y' or flag1 == 'Y'):
         os.system("cdk synth")
     except:
         raise
-    flag2=input("Do you want to deploy the above stack?(y/n) ")
 
-if(flag2 == 'y' or flag2 == 'Y' or flag1 != 'y' or flag1 != 'Y'):
+flag2=input("Do you want to deploy the stack?(y/n) ")
+
+if(flag2 == 'y' or flag2 == 'Y'):
     try:
         parameter_file = open('cdk/data/parameters.json','r')
         Parameters=json.load(parameter_file)
@@ -18,7 +19,6 @@ if(flag2 == 'y' or flag2 == 'Y' or flag1 != 'y' or flag1 != 'Y'):
         command=f"cdk deploy --require-approval never "
         for key, value in Parameters.items():
             command=command+f"--parameters {key}={value} "
-
         os.system(command)
 
     except:

@@ -1,4 +1,9 @@
 {
     "InstanceType": "t2.micro",
-    "InstanceName": "webserver-420"
+    "InstanceName": "webserver-420",
+    "AmiId": "ami-08df646e18b182346",
+    "VpcCidr": "10.1.0.0/16",
+    "PublicSubCidr": "10.1.10.0/24",
+    "PrivateSubCidr": "10.1.50.0/24",
+    "KeyPair": "hygieia"
 }
